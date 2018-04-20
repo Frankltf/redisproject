@@ -29,4 +29,9 @@ class Login{
             return FALSE;
         }
     }
+    public function savepost($data){
+        print_r($data);
+        die('aaa');
+        $redis=BaseRedis::getinstance();
+    }
 }
