@@ -52,7 +52,6 @@ class Login{
         $redis=BaseRedis::getinstance();
         # TODO 如何取出符合条件的多条数据
        $list=$redis->redisdb->sort('newuserlink',array('sore'=>'desc','get'=>'user:userid:*:username'));
-        print_var($list);
-        die();
+        return $list;
     }
 }
