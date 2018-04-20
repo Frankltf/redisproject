@@ -27,7 +27,7 @@ class Login{
             $time=1*60;
             $redis->redisdb->set('token:userid',$userid);
             $redis->redisdb->setTimeout('token:userid',60*2);
-            return TRUE;
+            return $userid;
         }else{
             return FALSE;
         }

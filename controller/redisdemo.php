@@ -12,7 +12,8 @@ class Redisdemo extends Basecontroller{
         $this->render('login');
     }
     public function home(){
-        $this->render('home');
+        $userid=$_GET['userid'];
+        $this->render('home',array('userid'=>$userid));
     }
     public function register(){
        $username=$_POST['username'];  
@@ -43,6 +44,7 @@ class Redisdemo extends Basecontroller{
         if($res){
             $result['msg']='success';
             $result['status']=200;
+            $result['userid']=$res;
             echo json_encode($result);
         }else{
             $result['msg']='fail';

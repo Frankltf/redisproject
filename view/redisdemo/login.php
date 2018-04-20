@@ -87,7 +87,7 @@
                 dataType:'json',
                 success:function(data,status){
                     if(data.status=='200'){
-                        window.location='http://47.104.93.205/redisproject/index.php?action=redisdemo&method=home';
+                        window.location='http://47.104.93.205/redisproject/index.php?action=redisdemo&method=home&userid='+data.userid;
                     }else{
                         alert('fail');
                     }
