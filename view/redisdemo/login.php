@@ -46,9 +46,10 @@
     <?php echo include_once ROOTPATH.'/view/layout/footer.php'?>
 
     <script>
-        var username=$('#username').val();
-        var password=$("#password").val();
+
         function zhuce() {
+            var username=$('#username').val();
+            var password=$("#password").val();
             console.log(username);
             console.log(password);
         }
