@@ -11,6 +11,6 @@ function judgerequest(){
         return 'get';
     }
 }
-function getconfig($key){
-    return $GLOBALS['config'][$key];
+function getconfig($db='mysql',$key){
+    return $GLOBALS['config'][$db][$key];
 }

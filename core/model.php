@@ -16,11 +16,11 @@ class Model implements Mysql {
     private $dbo;
     private static $_instance;
     private function __construct() {
-        $this->dbms=getconfig('DBMS');
-        $this->dbhost=getconfig('DBHOST');
-        $this->dbname=getconfig('DBNAME');
-        $this->dbuser=getconfig('DBUSER');
-        $this->dbpass=getconfig('DBPASS');
+        $this->dbms=getconfig('mysql','DBMS');
+        $this->dbhost=getconfig('mysql','DBHOST');
+        $this->dbname=getconfig('mysql','DBNAME');
+        $this->dbuser=getconfig('mysql','DBUSER');
+        $this->dbpass=getconfig('mysql','DBPASS');
         $dbdsn=$this->dbms.":host=".$this->dbhost.';dbname='.$this->dbname;
         $dbh=new PDO($dbdsn,$this->dbuser,$this->dbpass);
         $this->dbo=$dbh;

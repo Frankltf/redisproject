@@ -6,11 +6,11 @@
  * Time: 10:50
  */
 require_once ROOTPATH.'/core/basecontroller.php';
+use redismodels\Login;
 class Redisdemo extends Basecontroller{
     public function login(){
-        $redis=new Redis();
-        $redis->connect('127.0.0.1','6379');
-        $redis->set('redisproject','successpro');
+        $model_login=new Login();
+        $model_login->saveuser();
         $this->render('login');
     }
     public function home(){
