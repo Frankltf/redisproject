@@ -52,8 +52,10 @@
             var password=$("#password").val();
             $.ajax({
                 type:'POST',
-                url:'http://47.104.93.205/redisproject/index.php?action=redisdemo&method=register',
+                url:'http://47.104.93.205/redisproject/index.php',
                 data:{
+                    action:'redisdemo',
+                    method:'register',
                     username:username,
                     password:password
                 },

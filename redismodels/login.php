@@ -8,9 +8,11 @@
 namespace redismodels;
 use core\BaseRedis;
 class Login{
-    public function saveuser(){
+    public function saveuser($con){
         $redis=BaseRedis::getinstance();
-        $redis->redisdb->set('classkey','one');
-        
+        $userid=$redis->redisdb->incr('global:userid');
+        $redis->redisdb->set('user:userid:'.$userid.':username',$con['username']);
+        $redis->redisdb->set('user:userid:'.$userid.':password',$con['password']);
+        return true;
     }
 }
