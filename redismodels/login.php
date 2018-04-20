@@ -6,7 +6,7 @@
  * Time: 11:37
  */
 namespace redismodels;
-require_once ROOTPATH.'/core/redis.php';
+use core\BaseRedis;
 class Login{
     public function saveuser(){
         $redis=BaseRedis::getinstance();

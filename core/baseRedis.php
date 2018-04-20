@@ -5,6 +5,7 @@
  * Date: 2018/4/20
  * Time: 11:24
  */
+namespace core;
 class BaseRedis{
     private $host;
     private $port;
