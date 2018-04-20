@@ -60,9 +60,13 @@
                     password:password
                 },
                 dataType:'json',
-                success:function(result){
+                success:function(data,status){
                     alert('success');
-                    console.log(result);
+                    console.log(data);
+                    console.log(status);
+                },
+                error:function(jqXHR){
+                    console.log(jqXHR)
                 }
 
             });        
