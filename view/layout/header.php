@@ -11,9 +11,8 @@
         <a href="/"><img style="border:none" src="/redisproject/asset/logo.png" width="192" height="85"
                          alt="Retwis"></a>
         <div id="navbar">
-            <a href="index.php">主页</a>
-            | <a href="timeline.php">热点</a>
-
+            <a href="http://47.104.93.205/redisproject/index.php?action=redisdemo&method=profile">主页</a>
+            | <a href="http://47.104.93.205/redisproject/index.php?action=redisdemo&method=timeline">热点</a>
             | <a href="logout.php">退出</a>
 
         </div>

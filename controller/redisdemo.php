@@ -66,5 +66,11 @@ class Redisdemo extends Basecontroller{
             echo json_encode($result);
         }
     }
+    public function profile(){
+        $this->render('profile');
+    }
+    public function timeline(){
+        $this->render('timeline');
+    }
 
 }

@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9c5cd92a-be6e-4fbc-b496-657cb4814138" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/redismodels/login.php" afterPath="$PROJECT_DIR$/redismodels/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/redisdemo.php" afterPath="$PROJECT_DIR$/controller/redisdemo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/layout/header.php" afterPath="$PROJECT_DIR$/view/layout/header.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/view/redisdemo/profile.html" afterPath="$PROJECT_DIR$/view/redisdemo/profile.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/view/redisdemo/timeline.html" afterPath="$PROJECT_DIR$/view/redisdemo/timeline.php" />
     </list>
     <ignored path="redisproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,17 +27,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="redisdemo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="redisdemo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/redisdemo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="781">
+              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
               <folding>
                 <element signature="n#login#0;n#Redisdemo#0;n#!!top" expanded="true" />
                 <element signature="n#home#0;n#Redisdemo#0;n#!!top" expanded="true" />
                 <element signature="n#register#0;n#Redisdemo#0;n#!!top" expanded="true" />
                 <element signature="n#loginin#0;n#Redisdemo#0;n#!!top" expanded="true" />
+                <element signature="n#faweibo#0;n#Redisdemo#0;n#!!top" expanded="true" />
+                <element signature="n#profile#0;n#Redisdemo#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/redisdemo/profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="60" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,9 +57,10 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/redisdemo/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+            <state relative-caret-position="253">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
               <folding>
+                <element signature="e#1148#1317#0#HTML" expanded="true" />
                 <element signature="e#1352#1402#0#HTML" expanded="true" />
               </folding>
             </state>
@@ -54,8 +70,18 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/layout/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+            <state relative-caret-position="308">
+              <caret line="14" column="107" selection-start-line="14" selection-start-column="107" selection-end-line="14" selection-end-column="107" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timeline.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/redisdemo/timeline.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,13 +162,15 @@
         <option value="$PROJECT_DIR$/core/redis.php" />
         <option value="$PROJECT_DIR$/core/autoload.php" />
         <option value="$PROJECT_DIR$/core/baseRedis.php" />
-        <option value="$PROJECT_DIR$/view/layout/header.php" />
         <option value="$PROJECT_DIR$/asset/js/jq.js" />
         <option value="$PROJECT_DIR$/view/layout/footer.php" />
         <option value="$PROJECT_DIR$/view/redisdemo/login.php" />
         <option value="$PROJECT_DIR$/view/redisdemo/home.php" />
-        <option value="$PROJECT_DIR$/controller/redisdemo.php" />
         <option value="$PROJECT_DIR$/redismodels/login.php" />
+        <option value="$PROJECT_DIR$/view/redisdemo/profile.php" />
+        <option value="$PROJECT_DIR$/controller/redisdemo.php" />
+        <option value="$PROJECT_DIR$/view/layout/header.php" />
+        <option value="$PROJECT_DIR$/view/redisdemo/timeline.php" />
       </list>
     </option>
   </component>
@@ -386,12 +414,12 @@
       <option name="presentableId" value="Default" />
       <updated>1524192132276</updated>
       <workItem from="1524192133895" duration="4189000" />
-      <workItem from="1524208792817" duration="5686000" />
+      <workItem from="1524208792817" duration="6451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13389000" />
+    <option name="totallyTimeSpent" value="14154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="226" y="43" width="1601" height="1008" extended-state="0" />
@@ -435,6 +463,8 @@
             <element signature="n#home#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#register#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#loginin#0;n#Redisdemo#0;n#!!top" expanded="true" />
+            <element signature="n#faweibo#0;n#Redisdemo#0;n#!!top" expanded="true" />
+            <element signature="n#profile#0;n#Redisdemo#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -622,6 +652,8 @@
             <element signature="n#home#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#register#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#loginin#0;n#Redisdemo#0;n#!!top" expanded="true" />
+            <element signature="n#faweibo#0;n#Redisdemo#0;n#!!top" expanded="true" />
+            <element signature="n#profile#0;n#Redisdemo#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -764,6 +796,8 @@
             <element signature="n#home#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#register#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#loginin#0;n#Redisdemo#0;n#!!top" expanded="true" />
+            <element signature="n#faweibo#0;n#Redisdemo#0;n#!!top" expanded="true" />
+            <element signature="n#profile#0;n#Redisdemo#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -903,14 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/layout/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/redisdemo/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
@@ -922,16 +948,6 @@
             <element signature="e#2868#3751#0#HTML" expanded="true" />
             <element signature="e#3360#3627#0#HTML" expanded="true" />
             <element signature="e#3666#3724#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/redisdemo/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding>
-            <element signature="e#1352#1402#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -948,16 +964,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/redisdemo/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding>
+            <element signature="e#1148#1317#0#HTML" expanded="true" />
+            <element signature="e#1352#1402#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/redisdemo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="781">
+          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
           <folding>
             <element signature="n#login#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#home#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#register#0;n#Redisdemo#0;n#!!top" expanded="true" />
             <element signature="n#loginin#0;n#Redisdemo#0;n#!!top" expanded="true" />
+            <element signature="n#faweibo#0;n#Redisdemo#0;n#!!top" expanded="true" />
+            <element signature="n#profile#0;n#Redisdemo#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="107" selection-start-line="14" selection-start-column="107" selection-end-line="14" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/redisdemo/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/redisdemo/timeline.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
