@@ -86,9 +86,11 @@
                 },
                 dataType:'json',
                 success:function(data,status){
-                    alert('success');
-                    console.log(data);
-                    console.log(status);
+                    if(data.status=='200'){
+                        window.location='http://47.104.93.205/redisproject/index.php?action=redisdemo&method=home';
+                    }else{
+                        alert('fail');
+                    }
                 },
                 error:function(jqXHR){
                     console.log(jqXHR)

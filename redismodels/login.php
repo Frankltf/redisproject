@@ -19,6 +19,9 @@ class Login{
     public function findbyname($con){
         $redis=BaseRedis::getinstance();
         $userid=$redis->redisdb->get('user:username:'.$con['username'].':userid');
+        if(!$userid){
+            return FALSE;
+        }
         $password=$redis->redisdb->get('user:userid:'.$userid.':password');
         if($password==$con['password']){
             return TRUE;
