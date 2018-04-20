@@ -10,6 +10,7 @@ class AutoLoad{
         spl_autoload_register(array($this,'my_autoload'));
     }
     public function my_autoload($className){
+        var_dump($className);
         $arr=explode('\\',$className);
         require_once ROOTPATH.'/'.$arr[0].'/'.lcfirst($arr[1]).'.php';
 

@@ -19,7 +19,7 @@ class BaseRedis{
     private function __clone(){}
     public static function getinstance(){
         if(!self::$instance){
-            self::$instance=new Redis();
+            self::$instance=new BaseRedis();
         }
         return self::$instance;
     }
