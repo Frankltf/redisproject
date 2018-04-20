@@ -12,7 +12,7 @@
                          alt="Retwis"></a>
         <div id="navbar">
             <a href="http://47.104.93.205/redisproject/index.php?action=redisdemo&method=profile&userid=<?php echo $userid;?>">主页</a>
-            | <a href="http://47.104.93.205/redisproject/index.php?action=redisdemo&method=timeline">热点</a>
+            | <a href="http://47.104.93.205/redisproject/index.php?action=redisdemo&method=home&userid=<?php echo $userid;?>">热点</a>
             | <a href="logout.php">退出</a>
         </div>
     </div>
