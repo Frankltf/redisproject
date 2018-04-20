@@ -9,8 +9,6 @@ require_once ROOTPATH.'/core/basecontroller.php';
 use redismodels\Login;
 class Redisdemo extends Basecontroller{
     public function login(){
-        $model_login=new Login();
-        $model_login->saveuser();
         $this->render('login');
     }
     public function home(){
