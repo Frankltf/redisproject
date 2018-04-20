@@ -1,6 +1,6 @@
 <?php echo include_once ROOTPATH.'/view/layout/header.php';?>
     <h2 class="username">test</h2>
-    <span onclick="guanzhu()" class="button">关注ta</span>
+    <span onclick="guanzhu(<?php echo $userid;?>)" class="button">关注ta</span>
     <div class="post">
         <a class="username" href="profile.php?u=test">test</a>
         world<br>
@@ -15,10 +15,10 @@
 
 <?php echo include_once ROOTPATH.'/view/layout/footer.php';?>
 <script>
-    function guanzhu() {
+    function guanzhu($userid) {
         $.ajax({
             type:'get',
-            url:'http://47.104.93.205/redisproject/index.php?action=redisdemo&method=guanzhu&is_watch=1',
+            url:'http://47.104.93.205/redisproject/index.php?action=redisdemo&method=guanzhu&is_watch=1&userid='+$userid,
             dataType:'json',
             success:function(data,status){
                 if(data.status=='200'){
