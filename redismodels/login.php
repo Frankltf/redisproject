@@ -16,4 +16,14 @@ class Login{
         $redis->redisdb->set('user:username:'.$con['username'].':userid',$userid);
         return true;
     }
+    public function findbyname($con){
+        $redis=BaseRedis::getinstance();
+        $userid=$redis->redisdb->get('user:username:'.$con['username'].':userid');
+        $password=$redis->redisdb->get('user:userid:'.$userid.':password');
+        if($password==$con['password']){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
 }

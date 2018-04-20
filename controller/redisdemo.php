@@ -33,5 +33,24 @@ class Redisdemo extends Basecontroller{
            echo json_encode($result);
        }
     }
+    public function loginin(){
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+        $model_login=new Login();
+        $condition['username']=$username;
+        $condition['password']=$password;
+        $res=$model_login->findbyname($condition);
+        $result['msg']='success';
+        $result['status']=200;
+        if($res){
+            $result['msg']='success';
+            $result['status']=200;
+            echo json_encode($result);
+        }else{
+            $result['msg']='fail';
+            $result['status']=500;
+            echo json_encode($result);
+        }
+    }
 
 }

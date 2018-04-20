@@ -24,14 +24,14 @@
                 <table>
                     <tr>
                         <td>用户名</td>
-                        <td><input type="text" name="username"></td>
+                        <td><input type="text" id="dengluname" name="username"></td>
                     </tr>
                     <tr>
                         <td>密码:</td>
-                        <td><input type="password" name="password"></td>
+                        <td><input type="password" id="denglupass" name="password"></td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="right"><input type="submit" name="doit" value="Login"></td>
+                        <td colspan="2" align="right"><input type="button" onclick="denglu()" name="doit" value="Login"></td>
                     </tr>
                 </table>
         </div>
@@ -72,6 +72,29 @@
             });        
         }
 
+        function denglu() {
+            var username=$('#dengluname').val();
+            var password=$("#denglupass").val();
+            $.ajax({
+                type:'POST',
+                url:'http://47.104.93.205/redisproject/index.php',
+                data:{
+                    action:'redisdemo',
+                    method:'loginin',
+                    username:username,
+                    password:password
+                },
+                dataType:'json',
+                success:function(data,status){
+                    alert('success');
+                    console.log(data);
+                    console.log(status);
+                },
+                error:function(jqXHR){
+                    console.log(jqXHR)
+                }
 
+            });
+        }
     </script>
 
