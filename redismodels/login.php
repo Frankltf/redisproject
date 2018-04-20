@@ -25,18 +25,16 @@ class Login{
         $password=$redis->redisdb->get('user:userid:'.$userid.':password');
         if($password==$con['password']){
             $time=1*60;
-            session_set_cookie_params($time);
-            session_start();
-            $_SESSION['userid']=$userid;
+            $redis->redisdb->set('token:userid',$userid);
+            $redis->redisdb->setTimeout('token:userid',60*2);
             return TRUE;
         }else{
             return FALSE;
         }
     }
     public function savepost($data){
-        sesstion_start();
         $redis=BaseRedis::getinstance();
-        $userid=$_SESSION['userid'];
+        $userid=$redis->redisdb->get('token:userid');
         var_dump($userid);
         die();
     }
