@@ -35,8 +35,10 @@ class Login{
     }
     public function savepost($data){
         $redis=BaseRedis::getinstance();
+        sesstion_start();
         $userid=$_SESSION['userid'];
+
         var_dump($userid);
-        
+        die();
     }
 }
