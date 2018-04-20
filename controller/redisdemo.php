@@ -17,6 +17,20 @@ class Redisdemo extends Basecontroller{
         $this->render('home');
     }
     public function register(){
-        print_r($_POST);
+       $username=$_POST['username'];  
+       $password=$_POST['password'];
+       $model_login=new Login();
+       $condition['username']=$username;
+       $condition['password']=$password;
+       $res=$model_login->saveuser($condition);
+       $result['msg']='success';
+       $result['status']=200;
+
+       if($res){
+        json_encode($result);
+       }else{
+        echo 'faild';
+       }
     }
+
 }
