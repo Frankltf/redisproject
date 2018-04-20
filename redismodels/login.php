@@ -32,10 +32,15 @@ class Login{
             return FALSE;
         }
     }
-    public function savepost($data){
+    public function savepost($con){
         $redis=BaseRedis::getinstance();
         $userid=$redis->redisdb->get('token:userid');
-        var_dump($userid);
-        die();
+        $postid=$redis->redisdb->incr('global:postid');
+        $redis->redisdb->set('post:postid:'.$postid.':postcontent',$con['content']);
+        $redis->redisdb->set('post:postid:'.$postid.':createtime',time());
+        $redis->redisdb->set('post:postid:'.$postid.':userid',$userid);
+        
+        return TRUE;
+        
     }
 }
