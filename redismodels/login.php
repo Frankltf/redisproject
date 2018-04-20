@@ -24,14 +24,19 @@ class Login{
         }
         $password=$redis->redisdb->get('user:userid:'.$userid.':password');
         if($password==$con['password']){
+            $time=1*60;
+            session_set_cookie_params($time);
+            session_start();
+            $_SESSION['userid']=$userid;
             return TRUE;
         }else{
             return FALSE;
         }
     }
     public function savepost($data){
-        print_r($data);
-        die('aaa');
         $redis=BaseRedis::getinstance();
+        $userid=$_SESSION['userid'];
+        var_dump($userid);
+        
     }
 }
