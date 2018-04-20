@@ -16,4 +16,7 @@ class Redisdemo extends Basecontroller{
     public function home(){
         $this->render('home');
     }
+    public function register(){
+        print_r($_POST);
+    }
 }

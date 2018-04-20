@@ -21,7 +21,7 @@
 <div id="registerbox">
 <h2>注册!</h2>
 <b>想试试Retwis? 请注册账号!</b>
-<form method="POST" action="register.php">
+<form method="POST" action="http://47.104.93.205/redisproject/index.php?action=redisdemo&method=register">
 <table>
 <tr>
   <td>用户名</td><td><input type="text" name="username"></td>
