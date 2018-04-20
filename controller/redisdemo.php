@@ -25,8 +25,6 @@ class Redisdemo extends Basecontroller{
        $res=$model_login->saveuser($condition);
        $result['msg']='success';
        $result['status']=200;
-        var_dump($res);
-        die();
        if($res){
            $result['msg']='success';
            $result['status']=200;

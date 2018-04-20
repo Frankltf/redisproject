@@ -59,6 +59,7 @@
                     username:username,
                     password:password
                 },
+                dataType:'json',
                 success:function(result){
                     alert('success');
                     console.log(result);
