@@ -14,6 +14,7 @@ class Login{
         $redis->redisdb->set('user:userid:'.$userid.':username',$con['username']);
         $redis->redisdb->set('user:userid:'.$userid.':password',$con['password']);
         $redis->redisdb->set('user:username:'.$con['username'].':userid',$userid);
+        $redis->redisdb->lPush('newuserlink',$userid);
         return true;
     }
     public function findbyname($con){
@@ -50,6 +51,8 @@ class Login{
     public function getpost($con){
         $redis=BaseRedis::getinstance();
         # TODO 如何取出符合条件的多条数据
-        $list=$redis->redisdb->sort('post:postid:'.);
+       $list=$redis->redisdb->sort('newuserlink',array('sore'=>'desc','get'=>'user:userid:*:username'));
+        print_var($list);
+        die();
     }
 }
