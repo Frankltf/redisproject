@@ -39,8 +39,12 @@ class Login{
         $redis->redisdb->set('post:postid:'.$postid.':postcontent',$con['content']);
         $redis->redisdb->set('post:postid:'.$postid.':createtime',time());
         $redis->redisdb->set('post:postid:'.$postid.':userid',$userid);
-        
         return TRUE;
-        
+    }
+    public function care($con){
+        $redis=BaseRedis::getinstance();
+        $userid=$redis->redisdb->get('token:userid');
+        $redis->redisdb->sAdd('following:userid:'.$userid,$con['userid']);
+        return TRUE;
     }
 }

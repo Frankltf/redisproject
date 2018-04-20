@@ -76,7 +76,19 @@ class Redisdemo extends Basecontroller{
         $this->render('timeline');
     }
     public function guanzhu(){
-        print_var($_GET);
+        $model_login=new Login();
+        $con['userid']=$_GET['userid'];
+        $con['is_watch']=$_GET['is_watch'];
+        $res=$model_login->care($con);
+        if($res){
+            $result['msg']='success';
+            $result['status']=200;
+            echo json_encode($result);
+        }else{
+            $result['msg']='fail';
+            $result['status']=500;
+            echo json_encode($result);
+        }
     }
 
 }
