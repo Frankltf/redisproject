@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c5cd92a-be6e-4fbc-b496-657cb4814138" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/redisdemo.php" afterPath="$PROJECT_DIR$/controller/redisdemo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/redismodels/login.php" afterPath="$PROJECT_DIR$/redismodels/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/redisdemo/profile.php" afterPath="$PROJECT_DIR$/view/redisdemo/profile.php" />
     </list>
     <ignored path="redisproject.iws" />
@@ -49,8 +47,8 @@
       <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/redisdemo/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+            <state relative-caret-position="198">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -383,12 +381,12 @@
       <updated>1524192132276</updated>
       <workItem from="1524192133895" duration="4189000" />
       <workItem from="1524208792817" duration="9735000" />
-      <workItem from="1524231939599" duration="2383000" />
+      <workItem from="1524231939599" duration="2659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19821000" />
+    <option name="totallyTimeSpent" value="20097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="3" width="1370" height="718" extended-state="0" />
@@ -827,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/redisdemo/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="68" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+        <state relative-caret-position="198">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding />
         </state>
       </provider>
