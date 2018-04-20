@@ -8,6 +8,9 @@
 require_once ROOTPATH.'/core/basecontroller.php';
 class Redisdemo extends Basecontroller{
     public function login(){
+        $redis=new Redis();
+        $redis->connect('127.0.0.1','6379');
+        $redis->set('redisproject','successpro');
         $this->render('login');
     }
     public function home(){
