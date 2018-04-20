@@ -10,7 +10,7 @@ use core\BaseRedis;
 class Login{
     public function saveuser(){
         $redis=BaseRedis::getinstance();
-        $redis->set('classkey','one');
+        $redis->redisdb->set('classkey','one');
         
     }
 }
