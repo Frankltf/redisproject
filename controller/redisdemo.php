@@ -72,5 +72,8 @@ class Redisdemo extends Basecontroller{
     public function timeline(){
         $this->render('timeline');
     }
+    public function guanzhu(){
+        print_var($_GET);
+    }
 
 }
