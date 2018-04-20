@@ -27,9 +27,13 @@ class Redisdemo extends Basecontroller{
        $result['status']=200;
 
        if($res){
-        json_encode($result);
+           $result['msg']='success';
+           $result['status']=200;
+
        }else{
-        echo 'faild';
+           $result['msg']='fail';
+           $result['status']=500;
+           json_encode($result);
        }
     }
 

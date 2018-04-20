@@ -58,6 +58,7 @@
                     password:password
                 },
                 success:function(result){
+                    alert('success');
                     console.log(result);
                 }
 
