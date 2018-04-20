@@ -47,4 +47,9 @@ class Login{
         $redis->redisdb->sAdd('following:userid:'.$userid,$con['userid']);
         return TRUE;
     }
+    public function getpost($con){
+        $redis=BaseRedis::getinstance();
+        # TODO 如何取出符合条件的多条数据
+        $list=$redis->redisdb->sort('post:postid:'.);
+    }
 }

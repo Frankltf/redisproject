@@ -70,6 +70,9 @@ class Redisdemo extends Basecontroller{
     }
     public function profile(){
         $userid=$_GET['userid'];
+        $model_login=new Login();
+        $con['userid']=$userid;
+        $res=$model_login->getpost($con);
         $this->render('profile',array('userid'=>$userid));
     }
     public function timeline(){
