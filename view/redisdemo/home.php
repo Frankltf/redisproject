@@ -1,4 +1,4 @@
-<?php echo include_once ROOTPATH.'/view/layout/header.php'?>
+<?php echo include_once ROOTPATH.'/view/layout/header.php';?>
     <div id="postform">
             xxx, 有啥感想?
             <br>
@@ -19,7 +19,7 @@
         <a class="username" href="profile.php?u=test">test</a> hello<br>
         <i>11 分钟前 通过 web发布</i>
     </div>
-    <?php echo include_once ROOTPATH.'/view/layout/footer.php'?>
+    <?php echo include_once ROOTPATH.'/view/layout/footer.php';?>
 <script>
     function denglu() {
         var content=$('#content').val();

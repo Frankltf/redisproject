@@ -1,4 +1,4 @@
-<?php echo include_once ROOTPATH.'/view/layout/header.php'?>
+<?php echo include_once ROOTPATH.'/view/layout/header.php';?>
     <h2 class="username">test</h2>
     <span onclick="guanzhu()" class="button">关注ta</span>
     <div class="post">
@@ -13,9 +13,9 @@
         <i>22 分钟前 通过 web发布</i>
     </div>
 
-<?php echo include_once ROOTPATH.'/view/layout/footer.php'?>
+<?php echo include_once ROOTPATH.'/view/layout/footer.php';?>
 <script>
-    function denglu() {
+    function guanzhu() {
         $.ajax({
             type:'get',
             url:'http://47.104.93.205/redisproject/index.php?action=redisdemo&method=guanzhu&is_watch=1',
