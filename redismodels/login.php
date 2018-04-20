@@ -13,6 +13,7 @@ class Login{
         $userid=$redis->redisdb->incr('global:userid');
         $redis->redisdb->set('user:userid:'.$userid.':username',$con['username']);
         $redis->redisdb->set('user:userid:'.$userid.':password',$con['password']);
+        $redis->redisdb->set('user:username:'.$con['username'].':userid',$userid);
         return true;
     }
 }
